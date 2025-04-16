@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-SpidSpringRestApplication<spid-spring-rest>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "it.italia.developers.spid.spidspringrest.SpidSpringRestApplication",
+            "projectName": "spid-spring-rest",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

@@ -7,6 +7,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
+import org.springframework.boot.actuate.autoconfigure.security.servlet.ManagementWebSecurityAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -31,7 +32,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 		@PropertySource("classpath:application.properties"),
 		@PropertySource("classpath:integration.properties"),
 		@PropertySource(value = "file:${spid-spring-integration.properties.path}", ignoreResourceNotFound = true) })
-@EnableAutoConfiguration(exclude = { SecurityAutoConfiguration.class })
+@EnableAutoConfiguration(exclude = { SecurityAutoConfiguration.class, ManagementWebSecurityAutoConfiguration.class })
 public class SpidSpringRestApplication {
 
 	public static void main(final String[] args) {
